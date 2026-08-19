@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The World of Desserts — Lutfun Nessa Lopa</title>
+<meta name="description" content="The World of Desserts — a personal visual journey through international desserts by Lutfun Nessa Lopa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#f6f0e5; --paper:#fbf8f1; --maroon:#4b172d; --burgundy:#641c39;
+  --forest:#1e4735; --sage:#dce4d6; --gold:#b89458; --cocoa:#2c211d;
+  --line:rgba(75,23,45,.14); --shadow:0 24px 70px rgba(44,33,29,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--cocoa);font-family:"DM Sans",sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.container{width:min(1180px,calc(100% - 48px));margin:auto}
+.nav{position:sticky;top:0;z-index:50;background:rgba(246,240,229,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{font-family:"Cormorant Garamond",serif;font-size:1.45rem;font-weight:700;letter-spacing:.06em;color:var(--maroon)}
+.navlinks{display:flex;gap:30px;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase}
+.navlinks a{opacity:.78;transition:.25s}.navlinks a:hover{opacity:1;color:var(--burgundy)}
+.hero{min-height:calc(100vh - 76px);display:grid;grid-template-columns:1fr .9fr;align-items:center;gap:70px;padding:70px 0 90px}
+.kicker{font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--forest);font-weight:600;margin-bottom:18px}
+.hero h1{font-family:"Cormorant Garamond",serif;color:var(--maroon);font-size:clamp(4.8rem,9vw,8.9rem);line-height:.77;margin:0 0 28px;letter-spacing:-.045em}
+.hero h1 span{display:block}
+.byline{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.45rem;color:var(--burgundy)}
+.hero-copy{max-width:590px}
+.hero-note{margin-top:42px;max-width:390px;font-size:.95rem;color:#5e5149}
+.hero-photo-wrap{display:flex;justify-content:center;align-items:center}
+.arch{width:min(500px,100%);aspect-ratio:4/5.8;border-radius:50% 50% 44% 44% / 22% 22% 12% 12%;overflow:hidden;box-shadow:var(--shadow);position:relative;background:#cdd7c8}
+.arch:after{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.48);border-radius:inherit;pointer-events:none}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:center 38%}
+.section{padding:120px 0}
+.intro{text-align:center;max-width:760px;margin:auto}
+.eyebrow{font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h2{font-family:"Cormorant Garamond",serif;color:var(--maroon);font-size:clamp(3rem,6vw,5.5rem);line-height:.9;margin:16px 0 24px;letter-spacing:-.03em}
+.lead{font-family:"Cormorant Garamond",serif;font-size:1.65rem;font-style:italic;color:#5a4a42}
+.explore{background:var(--sage)}
+.map-panel{display:grid;grid-template-columns:1fr 1.2fr;gap:55px;align-items:center}
+.map-copy p{max-width:470px}
+.world-map{min-height:380px;border:1px solid rgba(30,71,53,.18);border-radius:45% 55% 50% 48%;background:
+radial-gradient(circle at 20% 40%,rgba(30,71,53,.18) 0 2px,transparent 3px),
+radial-gradient(circle at 32% 54%,rgba(30,71,53,.18) 0 2px,transparent 3px),
+radial-gradient(circle at 49% 42%,rgba(30,71,53,.18) 0 2px,transparent 3px),
+radial-gradient(circle at 63% 50%,rgba(30,71,53,.18) 0 2px,transparent 3px),
+radial-gradient(circle at 76% 37%,rgba(30,71,53,.18) 0 2px,transparent 3px);
+background-size:110px 90px,90px 100px,120px 80px,100px 90px,120px 100px;
+position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.world-map:before{content:"";position:absolute;inset:16%;border:1px dashed rgba(30,71,53,.22);border-radius:48%}
+.country-pills{position:relative;display:flex;flex-wrap:wrap;justify-content:center;gap:9px;max-width:600px}
+.pill{border:1px solid rgba(30,71,53,.25);background:rgba(251,248,241,.75);padding:9px 14px;border-radius:999px;font-size:0.92rem;transition:.25s}
+.pill:hover{background:var(--forest);color:#fff;transform:translateY(-2px)}
+.country{padding:115px 0;border-bottom:1px solid var(--line)}
+.country-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:50px}
+.country-name{font-family:"Cormorant Garamond",serif;font-size:clamp(3.2rem,6vw,5.8rem);color:var(--maroon);line-height:.85;margin:0}
+.country-sub{font-style:italic;color:var(--forest);font-family:"Cormorant Garamond",serif;font-size:1.4rem}
+.editorial{display:grid;grid-template-columns:1.45fr .85fr;gap:35px;align-items:start}
+.dessert{position:relative}
+.dessert img{width:100%;height:100%;object-fit:cover;border-radius:2px;filter:saturate(.98);transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.dessert:hover img{transform:scale(1.025)}
+.feature{aspect-ratio:1.5}
+.side-stack{display:grid;gap:35px}
+.tall{aspect-ratio:.78}
+.medium{aspect-ratio:1.12}
+.caption{padding:16px 2px 0}
+.caption h3{font-family:"Cormorant Garamond",serif;font-size:2rem;color:var(--maroon);margin:0}
+.caption p{margin:0;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--forest)}
+.dessert-note{font-size:1.05rem;color:#6b5c52;margin-top:5px}
+.spotlight{background:var(--maroon);color:#fff}
+.spotlight .eyebrow{color:#d7bb82}.spotlight h2{color:#fff}
+.spot-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}
+.spot-img{aspect-ratio:1.35;overflow:hidden}.spot-img img{width:100%;height:100%;object-fit:cover}
+.spot-copy p{color:#eadfd8;max-width:470px}.spot-name{font-family:"Cormorant Garamond",serif;font-size:3.4rem;margin:12px 0 0}
+.gallery{padding-top:110px}
+.masonry{columns:3 260px;column-gap:18px}
+.gitem{break-inside:avoid;margin:0 0 18px;position:relative;overflow:hidden}
+.gitem img{width:100%;transition:transform .6s}.gitem:hover img{transform:scale(1.035)}
+.gcap{position:absolute;left:14px;bottom:14px;background:rgba(251,248,241,.9);padding:7px 10px;font-size:.72rem;letter-spacing:.08em}
+.contact{background:var(--paper)}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:90px}
+.form{display:grid;gap:18px}.form label{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--forest)}
+.form input,.form textarea{width:100%;border:0;border-bottom:1px solid var(--line);background:transparent;padding:12px 0;font:inherit;color:var(--cocoa);outline:none}
+.form textarea{min-height:150px;resize:vertical}.btn{border:0;background:var(--maroon);color:#fff;padding:15px 24px;letter-spacing:.13em;text-transform:uppercase;font-size:.72rem;cursor:pointer;width:max-content;transition:.25s}.btn:hover{background:var(--forest);transform:translateY(-2px)}
+.insta{margin-top:55px;padding-top:30px;border-top:1px solid var(--line)}.handle{font-family:"Cormorant Garamond",serif;font-size:1.8rem;color:var(--maroon)}
+.closing{padding:110px 0;text-align:center}.closing-photo{width:min(700px,100%);aspect-ratio:1.8;margin:35px auto;overflow:hidden}.closing-photo img{width:100%;height:100%;object-fit:cover}
+.footer{background:var(--forest);color:#f4eee4;padding:55px 0}.footer-grid{display:flex;justify-content:space-between;gap:30px;align-items:end}.footer .brand{color:#fff}.footer small{opacity:.72}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
+@media(max-width:900px){
+ .hero,.map-panel,.spot-grid,.contact-grid{grid-template-columns:1fr}.hero{gap:45px;padding-top:55px}.hero h1{font-size:clamp(4rem,16vw,7rem)}.hero-photo-wrap{order:-1}.arch{width:min(420px,80vw)}
+ .editorial{grid-template-columns:1fr}.country-head{display:block}.country-sub{display:block;margin-top:10px}.side-stack{grid-template-columns:1fr 1fr}
+ .spot-grid{gap:35px}.footer-grid{display:block}.footer nav{margin-top:18px}
+}
+@media(max-width:620px){
+ .container{width:min(100% - 28px,1180px)}.nav-inner{height:auto;min-height:68px}.brand{font-size:1.15rem}.navlinks{gap:12px;font-size:.65rem}
+ .hero{min-height:auto;padding:45px 0 70px}.hero-photo-wrap{order:-1}.arch{width:78vw}.section,.country{padding:80px 0}.side-stack{grid-template-columns:1fr}
+ h2{font-size:3.6rem}.lead{font-size:1.35rem}.world-map{min-height:320px}.masonry{columns:2 150px}
+}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#home">THE WORLD OF DESSERTS</a>
+    <nav class="navlinks">
+      <a href="#home">Home</a><a href="#explore">Explore</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section id="home" class="container hero">
+  <div class="hero-copy reveal">
+    <div class="kicker">A visual journey through sweetness</div>
+    <h1><span>THE WORLD</span><span>OF DESSERTS</span></h1>
+    <div class="byline">by Lutfun Nessa Lopa</div>
+    <p class="hero-note">A personal visual journey through the sweet creations, traditions and flavors of cultures around the world.</p>
+  </div>
+  <div class="hero-photo-wrap reveal">
+    <figure class="arch">
+      <img src="lutfun-nessa-lopa.jpg" alt="Lutfun Nessa Lopa in a dark maroon hijab with a natural green scenic background">
+    </figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container intro reveal">
+    <div class="eyebrow">The World of Desserts</div>
+    <h2>Sweetness has a geography.</h2>
+    <p class="lead">A visual journey through the sweet creations, traditions and flavors of cultures around the world.</p>
+  </div>
+</section>
+
+<section id="explore" class="section explore">
+  <div class="container map-panel">
+    <div class="map-copy reveal">
+      <div class="eyebrow">Explore the world</div>
+      <h2>Follow the sweetness.</h2>
+      <p>Travel from French patisserie to Japanese wagashi, Turkish pastries and Korean street sweets. Choose a country to wander through its desserts.</p>
+    </div>
+    <div class="world-map reveal" aria-label="Minimal editorial world map navigation">
+      <div class="country-pills">
+        <a class="pill" href="#france">France</a><a class="pill" href="#italy">Italy</a><a class="pill" href="#japan">Japan</a>
+        <a class="pill" href="#turkey">Turkey</a><a class="pill" href="#austria">Austria</a><a class="pill" href="#portugal">Portugal</a>
+        <a class="pill" href="#spain">Spain</a><a class="pill" href="#uk">United Kingdom</a><a class="pill" href="#usa">United States</a><a class="pill" href="#korea">South Korea</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="countries"></div>
+
+<section class="section spotlight">
+  <div class="container spot-grid reveal">
+    <div class="spot-img"><img id="spotImage" alt="Featured dessert photograph"></div>
+    <div class="spot-copy">
+      <div class="eyebrow">Sweet Spotlight</div>
+      <div class="spot-name">Baklava</div>
+      <p>Layers of crisp pastry, nuts and syrup — a rich Turkish classic whose texture and golden finish make it irresistible.</p>
+      <p><em>Turkey</em></p>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="section gallery">
+  <div class="container">
+    <div class="reveal"><div class="eyebrow">Dessert Gallery</div><h2>A feast for the eyes.</h2></div>
+    <div id="masonry" class="masonry"></div>
+  </div>
+</section>
+
+<section id="contact" class="section contact">
+  <div class="container contact-grid">
+    <div class="reveal">
+      <div class="eyebrow">Let's connect</div>
+      <h2>Tell me your sweet favorite.</h2>
+      <p>Have a favorite dessert, a suggestion, or simply want to say hello? I'd love to hear from you.</p>
+      <div class="insta">
+        <div class="eyebrow">Follow the journey</div>
+        <p>For more visual moments, follow along on Instagram.</p>
+        <div class="handle">@Lutfun Nessa Lopa</div>
+      </div>
+    </div>
+    <form class="form reveal" onsubmit="event.preventDefault(); alert('Thank you! Your message form is ready to connect to your preferred email service.');">
+      <div><label>Name</label><input required name="name" autocomplete="name"></div>
+      <div><label>Email</label><input required type="email" name="email" autocomplete="email"></div>
+      <div><label>Message</label><textarea required name="message"></textarea></div>
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="container reveal">
+    <div class="eyebrow">Every sweet has a story</div>
+    <h2>Explore the sweetness of cultures,<br>one dessert at a time.</h2>
+    <div class="closing-photo"><img id="closingImage" alt="Beautiful dessert photograph"></div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div><div class="brand">THE WORLD OF DESSERTS</div><small>An elegant journey through the world's sweetest creations.</small></div>
+    <div>
+      <nav class="navlinks"><a href="#home">Home</a><a href="#explore">Explore</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></nav>
+      <small>Instagram · @Lutfun Nessa Lopa<br>© 2026 Lutfun Nessa Lopa</small>
+    </div>
+  </div>
+</footer>
+
+<script>
+const desserts = [
+ {country:"France", id:"france", sub:"French Sweets", items:[
+  ["Macaron","macaron","A delicate meringue sandwich with a crisp shell and soft center."],
+  ["Crème Brûlée","creme brulee","Silky custard beneath a glassy caramelized top."],
+  ["Éclair","eclair","A choux pastry filled with cream and finished with glossy icing."]
+ ]},
+ {country:"Italy", id:"italy", sub:"Italian Dolci", items:[
+  ["Tiramisu","tiramisu","Coffee-soaked layers, mascarpone cream and cocoa."],
+  ["Panna Cotta","panna cotta","A softly set cream dessert with an elegant, silky texture."],
+  ["Cannoli","cannoli","Crisp pastry shells filled with sweet ricotta cream."]
+ ]},
+ {country:"Japan", id:"japan", sub:"Japanese Sweets", items:[
+  ["Mochi","mochi","Soft, chewy rice cakes wrapped around a sweet filling."],
+  ["Dorayaki","dorayaki","Fluffy castella pancakes sandwiching sweet red bean paste."]
+ ]},
+ {country:"Turkey", id:"turkey", sub:"Turkish Sweets", items:[
+  ["Baklava","baklava","Flaky pastry layered with nuts and fragrant syrup."],
+  ["Turkish Delight","turkish delight","Soft, jewel-like lokum dusted with fine sugar."]
+ ]},
+ {country:"Austria", id:"austria", sub:"Viennese Classics", items:[
+  ["Sachertorte","sachertorte","A rich chocolate cake layered with apricot jam."],
+  ["Apfelstrudel","apfelstrudel","Paper-thin pastry wrapped around warm spiced apples."]
+ ]},
+ {country:"Portugal", id:"portugal", sub:"Portuguese Pastry", items:[
+  ["Pastel de Nata","pastel de nata","Flaky custard tarts with beautifully caramelized tops."]
+ ]},
+ {country:"Spain", id:"spain", sub:"Spanish Sweets", items:[
+  ["Churros","churros","Golden fried dough, crisp outside and tender within."],
+  ["Crema Catalana","crema catalana","Citrus-kissed custard with a caramelized sugar crust."]
+ ]},
+ {country:"United Kingdom", id:"uk", sub:"British Desserts", items:[
+  ["Sticky Toffee Pudding","sticky toffee pudding","Warm date sponge covered in rich toffee sauce."],
+  ["Trifle","trifle","Layers of sponge, fruit, custard and cream."]
+ ]},
+ {country:"United States", id:"usa", sub:"American Classics", items:[
+  ["New York Cheesecake","new york cheesecake","Dense, creamy cheesecake with a buttery base."],
+  ["Brownie","brownie","Deeply chocolatey squares with a soft, fudgy center."]
+ ]},
+ {country:"South Korea", id:"korea", sub:"Korean Sweets", items:[
+  ["Bingsu","bingsu","Fine shaved ice topped with sweet, colorful accompaniments."],
+  ["Hotteok","hotteok","Pan-fried filled pancakes with a warm syrupy center."]
+ ]}
+];
+
+const commonsQuery = {
+  "macaron":"Macaron dessert",
+  "creme brulee":"Creme brulee dessert",
+  "eclair":"Eclair pastry dessert",
+  "tiramisu":"https://i.pinimg.com/736x/6b/5e/2e/6b5e2e71e2701c4538b356e26e1f17c0.jpg",
+  "panna cotta":"Panna cotta dessert",
+  "cannoli":"Cannoli dessert",
+  "mochi":"Mochi Japanese dessert",
+  "dorayaki":"Dorayaki Japanese dessert",
+  "baklava":"Baklava dessert",
+  "turkish delight":"Turkish Delight dessert",
+  "sachertorte":"https://i.pinimg.com/736x/f2/09/d9/f209d9248aa83d85136d408889d7bf37.jpg",
+  "apfelstrudel":"Apfelstrudel dessert",
+  "pastel de nata":"Pastel de nata Portuguese dessert",
+  "churros":"Churros dessert",
+  "crema catalana":"Crema catalana dessert",
+  "sticky toffee pudding":"Sticky toffee pudding dessert",
+  "trifle":"Trifle dessert",
+  "new york cheesecake":"New York cheesecake dessert",
+  "brownie":"Brownie dessert",
+  "bingsu":"Bingsu Korean dessert",
+  "hotteok":"Hotteok Korean food dessert"
+};
+
+const verified = {
+ "macaron":"https://i.pinimg.com/1200x/00/66/05/00660552ebd48f82519c68f21eb26e65.jpg",
+ "creme brulee":"https://i.pinimg.com/1200x/05/06/55/05065523b13d7f7f2bfe0d4af544e18b.jpg",
+ "eclair":"https://i.pinimg.com/1200x/8c/48/88/8c4888473d32c7f7680d573f15dde947.jpg",
+ "tiramisu":"tiramisu-user.jpg",
+ "panna cotta":"https://i.pinimg.com/1200x/32/bd/3b/32bd3b9669f5769017727365b0f1b428.jpg",
+ "cannoli":"https://i.pinimg.com/1200x/65/58/f9/6558f9ef71e9593f7fdce81f66671f23.jpg",
+ "mochi":"https://i.pinimg.com/736x/71/59/88/715988346c7fff771f1e60e92e69b2b8.jpg",
+ "dorayaki":"https://i.pinimg.com/1200x/31/fc/7e/31fc7e0aae144dc16cd0ef502071ded0.jpg",
+ "baklava":"https://i.pinimg.com/736x/62/4f/bb/624fbb4dc47ab008aa3f7d0342c9da28.jpg",
+ "turkish delight":"https://i.pinimg.com/736x/6f/0f/c0/6f0fc0050067562a032d3b4d2545aab8.jpg",
+ "sachertorte":"sachertorte-user.jpg",
+ "apfelstrudel":"https://i.pinimg.com/1200x/2d/3f/1f/2d3f1f1e8719ab68c38f9199fc589c9a.jpg",
+ "pastel de nata":"https://i.pinimg.com/736x/3c/92/c0/3c92c00017072b39a5e8a16753e5b1b1.jpg",
+ "churros":"https://i.pinimg.com/1200x/14/57/f3/1457f34ff36619f978c6a317648bf555.jpg",
+ "crema catalana":"https://i.pinimg.com/736x/6c/83/66/6c8366b716c14f157e492eb8ce0d0b28.jpg",
+ "sticky toffee pudding":"https://i.pinimg.com/1200x/92/ff/a6/92ffa6bb928721a058ddc8b511de7d4f.jpg",
+ "trifle":"https://i.pinimg.com/1200x/f4/ce/e5/f4cee5e7149731cc9dd440115a194fbf.jpg",
+ "new york cheesecake":"https://i.pinimg.com/1200x/4c/b8/9a/4cb89a7cfef29b7f33a2568f5a6eb7c6.jpg",
+ "brownie":"https://i.pinimg.com/736x/84/1c/a9/841ca98394b7d846c6e78ddf608b83b8.jpg",
+ "bingsu":"https://i.pinimg.com/736x/80/07/bf/8007bf13c2f5dd8b3c404b0b0e69db13.jpg",
+ "hotteok":"https://i.pinimg.com/736x/66/8c/b4/668cb47a3168afdd8a72aa2c204518be.jpg"
+};
+
+const cache = new Map();
+
+async function commonsImage(key){
+  if(cache.has(key)) return cache.get(key);
+  if(verified[key]) { cache.set(key, verified[key]); return verified[key]; }
+  const q = commonsQuery[key] || key + " dessert";
+  try{
+    const url = "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=" +
+      encodeURIComponent(q) + "&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url&iiurlwidth=1200&format=json&origin=*";
+    const data = await fetch(url).then(r=>r.json());
+    const pages = Object.values(data.query?.pages || {});
+    const chosen = pages.find(p => p.imageinfo?.[0]?.thumburl || p.imageinfo?.[0]?.url);
+    const img = chosen?.imageinfo?.[0]?.thumburl || chosen?.imageinfo?.[0]?.url;
+    if(img){ cache.set(key,img); return img; }
+  }catch(e){}
+  return "";
+}
+
+function imgFallback(el){
+  el.style.background = "linear-gradient(135deg,#e8dfd1,#c9d6c4)";
+  el.alt = "Real dessert photograph loading from Wikimedia Commons";
+}
+
+function countryHTML(c){
+  const cards = c.items.map((it,i)=>`
+    <article class="dessert ${i===0?'feature':'medium'} reveal">
+      <img data-dessert="${it[1]}" alt="${it[0]} — ${c.country}" loading="lazy" onerror="imgFallback(this)">
+      <div class="caption"><h3>${it[0]}</h3><p>${c.country}</p><div class="dessert-note">${it[2]}</div></div>
+    </article>`).join("");
+  const first = c.items[0], rest = c.items.slice(1);
+  return `<section id="${c.id}" class="country"><div class="container">
+    <div class="country-head reveal"><div><div class="eyebrow">${c.country}</div><h2 class="country-name">${c.country}</h2></div><div class="country-sub">${c.sub}</div></div>
+    <div class="editorial">
+      <article class="dessert feature reveal"><img data-dessert="${first[1]}" alt="${first[0]} — ${c.country}" loading="lazy" onerror="imgFallback(this)"><div class="caption"><h3>${first[0]}</h3><p>${c.country}</p><div class="dessert-note">${first[2]}</div></div></article>
+      <div class="side-stack">${rest.map(it=>`<article class="dessert medium reveal"><img data-dessert="${it[1]}" alt="${it[0]} — ${c.country}" loading="lazy" onerror="imgFallback(this)"><div class="caption"><h3>${it[0]}</h3><p>${c.country}</p><div class="dessert-note">${it[2]}</div></div></article>`).join("")}</div>
+    </div>
+  </div></section>`;
+}
+document.getElementById("countries").innerHTML = desserts.map(countryHTML).join("");
+
+async function hydrateImages(){
+  const els = [...document.querySelectorAll("[data-dessert]")];
+  await Promise.all(els.map(async el=>{
+    const key = el.dataset.dessert;
+    const src = await commonsImage(key);
+    if(src) el.src = src; else imgFallback(el);
+  }));
+  const first = await commonsImage("baklava");
+  if(first){ document.getElementById("spotImage").src=first; document.getElementById("closingImage").src=first; }
+  const gallery = desserts.flatMap(c=>c.items.map(it=>({name:it[0],country:c.country,key:it[1]})));
+  const galleryEl = document.getElementById("masonry");
+  for(const item of gallery){
+    const src = await commonsImage(item.key);
+    const div = document.createElement("figure");
+    div.className="gitem reveal";
+    if(src) div.innerHTML=`<img src="${src}" alt="${item.name} — ${item.country}" loading="lazy"><figcaption class="gcap">${item.name} — ${item.country}</figcaption>`;
+    else div.innerHTML=`<div style="aspect-ratio:1.3;background:#e8dfd1"></div><figcaption class="gcap">${item.name} — ${item.country}</figcaption>`;
+    galleryEl.appendChild(div);
+  }
+  observe();
+}
+function observe(){
+  const io = new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");io.unobserve(e.target)}}),{threshold:.08});
+  document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+}
+observe(); hydrateImages();
+</script>
+</body>
+</html>
